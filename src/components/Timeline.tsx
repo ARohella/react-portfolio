@@ -16,50 +16,38 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Jun 2025 - Aug 2025"
+            iconStyle={{ background: '#BF5700', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">SWE Intern - Wire Transfer Team</h3>
+            <h4 className="vertical-timeline-element-subtitle">Charles Schwab | Southlake, TX</h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+              C#/.NET 8, REST APIs, Business Rule Development, CI/CD, Agile
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Jul 2024 - Oct 2025"
+            iconStyle={{ background: '#BF5700', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Undergraduate Researcher</h3>
+            <h4 className="vertical-timeline-element-subtitle">Living with Robots Laboratory, Texas Robotics | Austin, TX</h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+              Human-Robot Interaction, NLP, Machine Learning, ASR Pipelines
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            date="Jun 2024"
+            iconStyle={{ background: '#BF5700', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Program Assistant</h3>
+            <h4 className="vertical-timeline-element-subtitle">The UTCS Academy for Robotics | Austin, TX</h4>
             <p>
-              Full-stack Development, API Development, User Experience
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2020"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
-            <p>
-              Automation, Data Governance, Statistical Analysis
+              Robotics Education, Linux, C++, Arduino, PID Control
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
