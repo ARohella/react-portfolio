@@ -1,0 +1,226 @@
+.readnotes-page {
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.readnotes-hero {
+    padding: 40px 10%;
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1;
+            color: #BF5700 !important;
+        }
+
+        svg {
+            font-size: 1.2rem;
+        }
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .readnotes-logo {
+        width: 180px;
+        height: 180px;
+        border-radius: 32px;
+        object-fit: cover;
+    }
+
+    .hero-text {
+        h1 {
+            font-size: 3em;
+            margin-block-start: 0;
+            margin-block-end: 5px;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            color: #BF5700 !important;
+            margin-block-start: 0;
+            margin-block-end: 15px;
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-block-end: 25px;
+        }
+    }
+
+    .app-store-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #BF5700;
+        color: white !important;
+        padding: 12px 24px;
+        border-radius: 10px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #a34b00;
+            text-decoration: none;
+            color: white !important;
+        }
+
+        svg {
+            font-size: 1.3rem;
+            color: white !important;
+        }
+    }
+}
+
+.readnotes-tech {
+    padding: 40px 10%;
+
+    h2 {
+        margin-block-end: 25px;
+    }
+
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .tech-item {
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid rgba(191, 87, 0, 0.2);
+
+        h3 {
+            color: #BF5700 !important;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-block-start: 0;
+            margin-block-end: 8px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
+}
+
+.readnotes-features {
+    padding: 40px 10% 80px;
+
+    h2 {
+        margin-block-end: 40px;
+    }
+
+    .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .feature-row {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .feature-image {
+        flex: 0 0 280px;
+
+        img {
+            width: 280px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .feature-text {
+        flex: 1;
+
+        h3 {
+            font-size: 1.8em;
+            margin-block-start: 0;
+            margin-block-end: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+    }
+}
+
+@media screen {
+    @media (max-width: 768px) {
+        .readnotes-hero {
+            padding: 30px 5%;
+
+            .hero-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
+            }
+
+            .readnotes-logo {
+                width: 120px;
+                height: 120px;
+                border-radius: 24px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2em;
+            }
+        }
+
+        .readnotes-tech {
+            padding: 30px 5%;
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .readnotes-features {
+            padding: 30px 5% 60px;
+
+            .feature-row,
+            .feature-row.reverse {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .feature-image {
+                flex: none;
+
+                img {
+                    width: 220px;
+                }
+            }
+
+            .feature-text h3 {
+                font-size: 1.4em;
+            }
+        }
+    }
+}

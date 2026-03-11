@@ -28,6 +28,18 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            date="Jun 2025"
+            iconStyle={{ background: '#BF5700', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Resident Assistant</h3>
+            <h4 className="vertical-timeline-element-subtitle">UTCS Academy for Machine Learning | Austin, TX</h4>
+            <p>
+              ML Mentorship, Program Logistics, Technical Workshop Coordination
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
             date="Jul 2024 - Oct 2025"
             iconStyle={{ background: '#BF5700', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}

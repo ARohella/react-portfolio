@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../assets/styles/Project.scss';
 
 const projects = [
@@ -6,7 +7,8 @@ const projects = [
         title: "ReadNotes",
         subtitle: "iOS AI Retention App",
         description: "A production iOS app built in Swift/SwiftUI using Apple Speech Recognition and the Gemini API to convert spoken reading notes into single-sentence insights. Features an offline-first SwiftData + CloudKit architecture.",
-        url: "https://github.com/ARohella",
+        url: "/readnotes",
+        internal: true,
     },
     {
         title: "TradeTorch",
@@ -71,9 +73,11 @@ function Project() {
         <div className="projects-grid">
             {projects.map((project, index) => (
                 <div className="project" key={index}>
-                    <a href={project.url} target="_blank" rel="noreferrer">
-                        <h2>{project.title}</h2>
-                    </a>
+                    {(project as any).internal ? (
+                        <Link to={project.url}><h2>{project.title}</h2></Link>
+                    ) : (
+                        <a href={project.url} target="_blank" rel="noreferrer"><h2>{project.title}</h2></a>
+                    )}
                     <h3 className="project-subtitle">{project.subtitle}</h3>
                     <p>{project.description}</p>
                 </div>
