@@ -17,7 +17,7 @@ function Main() {
             <a href="https://www.linkedin.com/in/akshatrohella/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
           <h1>Akshat Rohella</h1>
-          <p>Aspiring SWE | UT Austin '26</p>
+          <p>Aspiring SWE | CS + SDS @ UT Austin '26</p>
 
           <div className="mobile_social_icons">
             <a href="https://github.com/ARohella" target="_blank" rel="noreferrer"><GitHubIcon/></a>
