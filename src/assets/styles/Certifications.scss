@@ -1,0 +1,122 @@
+.certifications-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10%;
+    text-align: left;
+}
+
+.certifications-container .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.certifications-container .certifications-grid .certification {
+    text-align: left;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(191, 87, 0, 0.2);
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.certifications-container .certifications-grid .certification:hover {
+    border-color: #BF5700;
+    transform: translateY(-3px);
+}
+
+.cert-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.cert-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: white;
+    padding: 4px;
+}
+
+.cert-logo-fallback {
+    color: #BF5700;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.cert-info {
+    flex: 1;
+
+    h3 {
+        margin: 0 0 4px 0;
+        font-size: 1.05em;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover h3 {
+            text-decoration: underline;
+        }
+    }
+}
+
+.cert-issuer {
+    margin: 0 0 2px 0;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.cert-date {
+    margin: 0 0 2px 0;
+    font-size: 0.82em;
+    opacity: 0.7;
+}
+
+.cert-credential {
+    margin: 0;
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+.cert-skills {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.cert-skill-tag {
+    background-color: rgba(191, 87, 0, 0.15);
+    color: #BF5700;
+    font-size: 0.75em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family: 'Courier Prime', monospace;
+}
+
+@media screen {
+    @media (max-width: 700px) {
+        .certifications-container {
+            display: block;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .certifications-container .certifications-grid {
+            display: block;
+        }
+
+        .certifications-container .certifications-grid .certification {
+            margin-bottom: 20px;
+        }
+    }
+}

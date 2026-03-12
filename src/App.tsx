@@ -8,6 +8,7 @@ import {
   Contact,
   Navigation,
   Footer,
+  Certifications,
 } from "./components";
 import FadeIn from './components/FadeIn';
 import ReadNotesPage from './components/ReadNotesPage';
@@ -26,6 +27,7 @@ function Portfolio({mode, handleModeChange}: {mode: string, handleModeChange: ()
             <Expertise/>
             <Timeline/>
             <Project/>
+            <Certifications/>
             <Contact/>
         </FadeIn>
         <Footer />

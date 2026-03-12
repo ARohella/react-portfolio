@@ -1,8 +1,22 @@
 .projects-container {
     display: flex;
     flex-direction: column;
-    padding: 5% 10%;
+    padding: 40px 10%;
     text-align: left;
+}
+
+.in-progress-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #BF5700;
+    color: white !important;
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .projects-container .projects-grid {
@@ -12,6 +26,7 @@
 }
 
 .projects-container .projects-grid .project {
+    position: relative;
     text-align: left;
     padding: 25px;
     border-radius: 8px;

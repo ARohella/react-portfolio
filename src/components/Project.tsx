@@ -4,6 +4,12 @@ import '../assets/styles/Project.scss';
 
 const projects = [
     {
+        title: "Allocare",
+        subtitle: "AI Budgeting & Financial Insights App",
+        description: "An AI-powered personal finance app using React Native, Node.js, and Plaid APIs for automated budgeting. Features OCR receipt categorization, recurring payment detection, LLM-powered financial advisor chat, and real-time spending alerts. Leading a team of 8 engineers.",
+        inProgress: true,
+    },
+    {
         title: "ReadNotes",
         subtitle: "iOS AI Retention App",
         description: "A production iOS app built in Swift/SwiftUI using Apple Speech Recognition and the Gemini API to convert spoken reading notes into single-sentence insights. Features an offline-first SwiftData + CloudKit architecture.",
@@ -92,10 +98,13 @@ function Project() {
             {projects.map((project, index) => (
                 <div className="project" key={index}>
                     {(project as any).internal ? (
-                        <Link to={project.url}><h2>{project.title}</h2></Link>
-                    ) : (
+                        <Link to={project.url!}><h2>{project.title}</h2></Link>
+                    ) : project.url ? (
                         <a href={project.url} target="_blank" rel="noreferrer"><h2>{project.title}</h2></a>
+                    ) : (
+                        <h2>{project.title}</h2>
                     )}
+                    {(project as any).inProgress && <span className="in-progress-badge">In Progress</span>}
                     <h3 className="project-subtitle">{project.subtitle}</h3>
                     <p>{project.description}</p>
                 </div>

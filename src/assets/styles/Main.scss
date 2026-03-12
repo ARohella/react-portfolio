@@ -65,6 +65,23 @@
     padding-bottom: 30%;
 }
 
+.about-me-section {
+    padding: 40px 10%;
+    text-align: left;
+
+    h1 {
+        margin-block-end: 10px;
+    }
+
+    p {
+        font-size: 1.05em;
+        line-height: 1.7;
+        opacity: 0.9;
+        margin-block-start: 8px;
+        margin-block-end: 8px;
+    }
+}
+
 @media screen {
     @media (max-width: 567px) {
         .nav-left{
@@ -152,6 +169,11 @@
         .about-section .image-wrapper {
             padding-left: 5%;
             width: 100%;
+        }
+
+        .about-me-section {
+            padding-left: 5%;
+            padding-right: 5%;
         }
     }
 }
