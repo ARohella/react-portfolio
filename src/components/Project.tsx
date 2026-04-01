@@ -17,6 +17,12 @@ const projects = [
         internal: true,
     },
     {
+        title: "IronPace",
+        subtitle: "iOS Hybrid Athlete Training App",
+        description: "A native iOS training app for hybrid athletes combining lifting and cardio data with an ACWR-based readiness engine. Features fatigue-aware progression, HealthKit and Strava integration, cardio analytics, and multi-exercise workout logging. Built with Swift, SwiftUI, and SwiftData with CloudKit sync.",
+        url: "https://github.com/ARohella/ironpace_app",
+    },
+    {
         title: "Momentum",
         subtitle: "AI Productivity Dashboard",
         description: "An integrated productivity dashboard combining calendar management, task tracking, habit monitoring, and AI-assisted scheduling. Built with Next.js, TypeScript, Tailwind CSS, and Gemini API.",
