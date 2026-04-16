@@ -17,6 +17,12 @@ const projects = [
         internal: true,
     },
     {
+        title: "Bruh",
+        subtitle: "iOS Screen Time Intervention App",
+        description: "A native iOS app that intercepts shielded app launches with personalized nudges — showing the user's own reasons for quitting, attempt counts, and alternative suggestions. Features session management with cooldowns, mood × scroll correlation analytics, goal tracking, and a nudge engine powered by onboarding answers. Built with Swift, SwiftUI, FamilyControls, ManagedSettings, and DeviceActivity across 3 app extension targets.",
+        url: "https://github.com/ARohella/bruh_screentime_app",
+    },
+    {
         title: "IronPace",
         subtitle: "iOS Hybrid Athlete Training App",
         description: "A native iOS training app for hybrid athletes combining lifting and cardio data with an ACWR-based readiness engine. Features fatigue-aware progression, HealthKit and Strava integration, cardio analytics, and multi-exercise workout logging. Built with Swift, SwiftUI, and SwiftData with CloudKit sync.",
