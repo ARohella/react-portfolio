@@ -11,6 +11,7 @@ import {
   Certifications,
 } from "./components";
 import FadeIn from './components/FadeIn';
+import Reveal from './components/Reveal';
 import ReadNotesPage from './components/ReadNotesPage';
 import './index.scss';
 
@@ -24,12 +25,12 @@ function Portfolio({mode, handleModeChange}: {mode: string, handleModeChange: ()
         <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
         <FadeIn transitionDuration={700}>
             <Main/>
-            <Expertise/>
-            <Timeline/>
-            <Project/>
-            <Certifications/>
-            <Contact/>
         </FadeIn>
+        <Reveal><Expertise/></Reveal>
+        <Reveal><Timeline/></Reveal>
+        <Reveal><Project/></Reveal>
+        <Reveal><Certifications/></Reveal>
+        <Reveal><Contact/></Reveal>
         <Footer />
     </div>
     );

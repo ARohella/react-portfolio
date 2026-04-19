@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCertificate } from '@fortawesome/free-solid-svg-icons';
+import DotGrid from './DotGrid';
 import '../assets/styles/Certifications.scss';
 
 const certifications = [
@@ -70,6 +71,7 @@ const certifications = [
 function Certifications() {
     return (
         <div className="certifications-container" id="certifications">
+            <DotGrid />
             <h1>Certifications</h1>
             <div className="certifications-grid">
                 {certifications.map((cert, index) => (

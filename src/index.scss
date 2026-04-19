@@ -92,6 +92,32 @@ p, a, h1, h2, h3, h4, h5, label, button {
   justify-content: center;
 }
 
+.dot-grid {
+  --dx: 0px;
+  --dy: 0px;
+  position: absolute;
+  inset: -40px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.22) 1px, transparent 1.5px);
+  background-size: 28px 28px;
+  background-position: 0 0;
+  transform: translate3d(var(--dx), var(--dy), 0);
+  transition: transform 0.25s ease-out;
+  pointer-events: none;
+  z-index: 0;
+  animation: dotFade 6s ease-in-out infinite;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+}
+
+.light-mode .dot-grid {
+  background-image: radial-gradient(circle, rgba(13, 17, 22, 0.22) 1px, transparent 1.5px);
+}
+
+@keyframes dotFade {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.85; }
+}
+
 .light-mode {
   background-color: #f8f9fa;
 
