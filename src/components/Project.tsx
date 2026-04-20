@@ -29,7 +29,7 @@ const featured: ProjectItem[] = [
         description: "An AI owl tutor that turns any stock chart into an interactive lesson. Drag across a chart region and Gemini explains why the price moved, then generates quizzes and spaced-repetition flashcards. Built in 24 hours at Hook 'Em Hacks 2026.",
         tags: ["Next.js", "TypeScript", "Tailwind", "Gemini"],
         videoId: "4kQi3DuMSqk",
-        github: "https://github.com/ARohella/hoot",
+        github: "https://github.com/aryamanm535/hootAI",
         liveDemo: "https://use-hoot.vercel.app/",
         devpost: "https://devpost.com/software/nnnn-gxjt1f",
     },
