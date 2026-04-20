@@ -65,6 +65,8 @@
         .timeline-card {
             grid-column: 1;
             text-align: right;
+            padding-left: 64px;
+            padding-right: 22px;
         }
     }
 
@@ -103,9 +105,36 @@
     box-shadow: 0 0 0 4px #f8f9fa, 0 0 24px rgba(191, 87, 0, 0.4);
 }
 
+.timeline-logo {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: white;
+    padding: 3px;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.timeline-item.left .timeline-card .timeline-logo {
+    right: auto;
+    left: 14px;
+}
+
+@media (max-width: 900px) {
+    .timeline-item.left .timeline-card .timeline-logo {
+        left: auto;
+        right: 14px;
+    }
+}
+
 .timeline-card {
     position: relative;
     padding: 20px 22px;
+    padding-right: 64px;
     border-radius: 14px;
     border: 1px solid rgba(191, 87, 0, 0.25);
     background: rgba(13, 17, 22, 0.6);

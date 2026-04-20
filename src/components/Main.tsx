@@ -8,7 +8,6 @@ const ROLES = [
   "Software Engineer",
   "iOS Developer",
   "Builder",
-  "UT Austin '26",
   "Hybrid Athlete",
 ];
 

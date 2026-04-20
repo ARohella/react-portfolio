@@ -13,6 +13,7 @@ type Role = {
     description: string;
     tags: string[];
     icon: IconDefinition;
+    logo?: string;
 };
 
 const roles: Role[] = [
@@ -24,6 +25,7 @@ const roles: Role[] = [
         description: "Built internal systems supporting wire transfers and payment operations.",
         tags: ["C#", ".NET 8", "REST APIs", "CI/CD", "Agile"],
         icon: faBriefcase,
+        logo: "https://www.google.com/s2/favicons?sz=128&domain=schwab.com",
     },
     {
         title: "Fintech Foundations Program Fellow",
@@ -33,6 +35,7 @@ const roles: Role[] = [
         description: "Fintech innovation case studies; won 3rd place at capstone.",
         tags: ["Fintech", "Case Studies", "Capstone"],
         icon: faGraduationCap,
+        logo: "https://www.google.com/s2/favicons?sz=128&domain=visa.com",
     },
     {
         title: "Resident Assistant",
@@ -42,6 +45,7 @@ const roles: Role[] = [
         description: "Mentored students through ML fundamentals and coordinated technical workshops.",
         tags: ["ML Mentorship", "Workshops", "Logistics"],
         icon: faChalkboardUser,
+        logo: "https://www.google.com/s2/favicons?sz=128&domain=utexas.edu",
     },
     {
         title: "Undergraduate Researcher",
@@ -51,6 +55,7 @@ const roles: Role[] = [
         description: "Human-robot interaction research with NLP and ASR pipelines.",
         tags: ["HRI", "NLP", "ML", "ASR"],
         icon: faFlask,
+        logo: "https://www.google.com/s2/favicons?sz=128&domain=utexas.edu",
     },
     {
         title: "Program Assistant",
@@ -60,6 +65,7 @@ const roles: Role[] = [
         description: "Taught robotics foundations: Linux, C++, Arduino, PID control.",
         tags: ["Linux", "C++", "Arduino", "PID"],
         icon: faMicrochip,
+        logo: "https://www.google.com/s2/favicons?sz=128&domain=utexas.edu",
     },
 ];
 
@@ -88,6 +94,14 @@ function Timeline() {
                                 <FontAwesomeIcon icon={role.icon} />
                             </div>
                             <div className="timeline-card">
+                                {role.logo && (
+                                    <img
+                                        src={role.logo}
+                                        alt={`${role.company} logo`}
+                                        className="timeline-logo"
+                                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                    />
+                                )}
                                 <span className="timeline-date">{role.date}</span>
                                 <h3 className="timeline-title">{role.title}</h3>
                                 <h4 className="timeline-company">{role.company} · <span>{role.location}</span></h4>

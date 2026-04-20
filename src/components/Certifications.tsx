@@ -14,6 +14,14 @@ const certifications = [
         logo: "/logos/amazon.png",
     },
     {
+        title: "Visa Fintech Foundations",
+        issuer: "Visa",
+        issued: "Nov 2025",
+        skills: ["Fintech", "Payment Systems", "Financial Innovation", "Case Studies"],
+        url: "https://www.credly.com/earner/earned/badge/0770d874-bd99-4ccf-be97-9ebfa7626c10",
+        logo: "https://www.google.com/s2/favicons?sz=128&domain=visa.com",
+    },
+    {
         title: "AWS Certified Cloud Practitioner",
         issuer: "Amazon Web Services (AWS)",
         issued: "Aug 2024",
