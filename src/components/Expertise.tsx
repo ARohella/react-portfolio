@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faCubes, faToolbox, faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faCubes, faToolbox, faTerminal, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import {
     faReact,
     faPython,
@@ -35,6 +35,8 @@ const ICON_MAP: Record<string, IconDefinition> = {
     "Node.js": faNodeJs,
     "AWS": faAws,
     "GCP": faGoogle,
+    "PostgreSQL": faDatabase,
+    "Redis": faDatabase,
     "Docker": faDocker,
     "Git": faGitAlt,
     "Linux": faLinux,
@@ -63,10 +65,14 @@ const frameworks = [
     "SwiftUI",
     "SwiftData",
     "Flask",
+    "SQLAlchemy",
     ".NET 8",
     "PyTorch",
     "Hugging Face",
     "Expo",
+    "pytest",
+    "Jest",
+    "Selenium",
 ];
 
 const tools = [
@@ -74,6 +80,8 @@ const tools = [
     "GCP",
     "Git",
     "Docker",
+    "PostgreSQL",
+    "Redis",
     "Linux",
     "REST APIs",
     "CI/CD",

@@ -6,6 +6,8 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import CloseIcon from '@mui/icons-material/Close';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGitlab } from '@fortawesome/free-brands-svg-icons';
 import '../assets/styles/Project.scss';
 
 type ProjectItem = {
@@ -15,6 +17,7 @@ type ProjectItem = {
     tags: string[];
     videoId?: string;
     github?: string;
+    gitlab?: string;
     liveDemo?: string;
     devpost?: string;
     internal?: string;
@@ -26,7 +29,7 @@ const featured: ProjectItem[] = [
     {
         title: "Hoot",
         subtitle: "AI Market Tutor",
-        description: "An AI owl tutor that turns any stock chart into an interactive lesson. Drag across a chart region and Gemini explains why the price moved, then generates quizzes and spaced-repetition flashcards. Built in 24 hours at Hook 'Em Hacks 2026.",
+        description: "An AI owl tutor that turns stock charts into lessons: highlight a region and Gemini explains the move, then builds quizzes and flashcards. Built at Hook 'Em Hacks 2026.",
         tags: ["Next.js", "TypeScript", "Tailwind", "Gemini"],
         videoId: "4kQi3DuMSqk",
         github: "https://github.com/aryamanm535/hootAI",
@@ -36,7 +39,7 @@ const featured: ProjectItem[] = [
     {
         title: "ReadNotes",
         subtitle: "iOS AI Retention App",
-        description: "A production iOS app built in Swift/SwiftUI using Apple Speech Recognition and the Gemini API to convert spoken reading notes into single-sentence insights. Features an offline-first SwiftData + CloudKit architecture.",
+        description: "A production iOS app that turns spoken reading notes into one-sentence insights using Apple Speech and Gemini, with offline-first SwiftData + CloudKit sync.",
         tags: ["Swift", "SwiftUI", "SwiftData", "Gemini"],
         internal: "/readnotes",
         gradient: "linear-gradient(135deg, #1a1f2e 0%, #BF5700 100%)",
@@ -44,27 +47,35 @@ const featured: ProjectItem[] = [
     {
         title: "Momentum",
         subtitle: "AI Productivity Dashboard",
-        description: "An integrated productivity dashboard combining calendar management, task tracking, habit monitoring, and AI-assisted scheduling. Built with Next.js, TypeScript, Tailwind CSS, and Gemini API.",
+        description: "A productivity dashboard combining calendar, tasks, habit tracking, and AI-assisted scheduling.",
         tags: ["Next.js", "TypeScript", "Tailwind", "Gemini"],
         videoId: "i-ckLLprsCw",
         github: "https://github.com/ARohella/Momentum_webapp",
         liveDemo: "https://use-momentum-one.vercel.app/",
     },
     {
-        title: "Allocare",
-        subtitle: "AI Budgeting & Financial Insights App",
-        description: "An AI-powered personal finance app using React Native, Node.js, and Plaid APIs for automated budgeting. Features OCR receipt categorization, recurring payment detection, an LLM financial advisor chat, and real-time spending alerts. Leading a team of 8 engineers.",
-        tags: ["React Native", "Node.js", "Plaid", "OpenAI"],
-        inProgress: true,
-        gradient: "linear-gradient(135deg, #0d1116 0%, #1e3a5f 50%, #BF5700 100%)",
+        title: "TexasCivicAccess",
+        subtitle: "Texas Election Data Platform",
+        description: "A team-built platform covering 250+ Texas counties, candidates, and polling locations. Flask API on Dockerized EC2 with Redis caching that cut repeat-query latency 45%.",
+        tags: ["Python", "Flask", "PostgreSQL", "AWS"],
+        gitlab: "https://gitlab.com/akshat.rohella/cs373-spring-2026-53375-12/",
+        gradient: "linear-gradient(135deg, #0d1116 0%, #1f2a4f 50%, #BF5700 100%)",
     },
 ];
 
 const others: ProjectItem[] = [
     {
+        title: "Allocare",
+        subtitle: "AI Budgeting & Financial Insights App",
+        description: "An AI personal finance app with Plaid-powered budgeting, OCR receipt categorization, and an LLM financial advisor. Led a team of 11 engineers.",
+        tags: ["React Native", "Node.js", "Plaid", "OpenAI"],
+        github: "https://github.com/ARohella/allocare-luminescence",
+        gradient: "linear-gradient(135deg, #0d1116 0%, #1e3a5f 50%, #BF5700 100%)",
+    },
+    {
         title: "Bruh",
         subtitle: "iOS Screen Time Intervention App",
-        description: "A native iOS app that intercepts shielded app launches with personalized nudges — showing your own reasons for quitting, attempt counts, and alternative suggestions. Built with 3 app extension targets using FamilyControls + DeviceActivity.",
+        description: "A native iOS app that intercepts blocked app launches with personalized nudges: your own reasons for quitting, attempt counts, and alternatives.",
         tags: ["Swift", "SwiftUI", "SwiftData", "FamilyControls"],
         videoId: "hGFYjuOtjxs",
         github: "https://github.com/ARohella/bruh_screentime_app",
@@ -72,7 +83,7 @@ const others: ProjectItem[] = [
     {
         title: "IronPace",
         subtitle: "Hybrid Athlete Training App",
-        description: "A native iOS training app that merges lifting and cardio with an ACWR-based readiness engine. Uses TRIMP, EWMA, and weighted signals to auto-adjust lifting targets based on fatigue. Integrates HealthKit and Strava with a merge layer.",
+        description: "A native iOS training app for lifting and cardio with an ACWR-based readiness engine that auto-adjusts lifting targets based on fatigue. Integrates HealthKit and Strava.",
         tags: ["Swift", "SwiftUI", "HealthKit", "Strava"],
         videoId: "TcMRbh4GGtQ",
         github: "https://github.com/ARohella/ironpace_app",
@@ -80,7 +91,7 @@ const others: ProjectItem[] = [
     {
         title: "Stampr",
         subtitle: "iOS City Exploration App",
-        description: "A native iOS app for documenting city exploration through check-in journaling with AI-powered location recommendations. Features map interface with emoji pins and gamification.",
+        description: "A native iOS app for journaling city exploration through check-ins, with AI location recommendations, emoji map pins, and gamification.",
         tags: ["Swift", "SwiftUI", "MapKit", "Gemini"],
         videoId: "OXXiUoutLqk",
         github: "https://github.com/ARohella/Stampr_app",
@@ -104,7 +115,7 @@ const others: ProjectItem[] = [
     {
         title: "TradeTorch",
         subtitle: "Stock Forecasting Tool",
-        description: "A full-stack ML stock forecaster using React, Flask, and a GRU-TCN ensemble trained on 10+ years of Yahoo Finance data. Test loss of 0.0283 with GRU contributing 80%+ of ensemble weight.",
+        description: "A full-stack stock forecaster using a GRU-TCN ensemble trained on 10+ years of Yahoo Finance data, reaching a test loss of 0.0283.",
         tags: ["Python", "React", "Flask", "PyTorch"],
         github: "https://github.com/ARohella/myCandleStick",
         gradient: "linear-gradient(135deg, #0d1116 0%, #3a1f0d 100%)",
@@ -121,7 +132,7 @@ const others: ProjectItem[] = [
     {
         title: "Scheduling & Payments Platform",
         subtitle: "Full-Stack Web App",
-        description: "A full-stack scheduling web app using React, Node.js, and AWS (DynamoDB, Cognito). Integrated Stripe for payments, enabling 75+ bookings and 25+ users during pilot testing.",
+        description: "A full-stack scheduling app on AWS (DynamoDB, Cognito) with Stripe payments, supporting 75+ bookings and 25+ users in pilot testing.",
         tags: ["React", "Node.js", "AWS", "Stripe"],
         github: "https://github.com/Akshat-and-Aryan/RezHive-React",
         gradient: "linear-gradient(135deg, #0d1116 0%, #1a3a4f 100%)",
@@ -242,8 +253,8 @@ function ProjectCard({ project, featured: isFeatured }: { project: ProjectItem; 
                         <div className="card-header">
                             {project.internal ? (
                                 <Link to={project.internal}><h2>{project.title}</h2></Link>
-                            ) : project.github || project.liveDemo ? (
-                                <a href={project.liveDemo || project.github} target="_blank" rel="noreferrer"><h2>{project.title}</h2></a>
+                            ) : project.github || project.gitlab || project.liveDemo ? (
+                                <a href={project.liveDemo || project.github || project.gitlab} target="_blank" rel="noreferrer"><h2>{project.title}</h2></a>
                             ) : (
                                 <h2>{project.title}</h2>
                             )}
@@ -272,6 +283,11 @@ function ProjectCard({ project, featured: isFeatured }: { project: ProjectItem; 
                             {project.github && (
                                 <a href={project.github} target="_blank" rel="noreferrer" className="card-link">
                                     <GitHubIcon /> Code
+                                </a>
+                            )}
+                            {project.gitlab && (
+                                <a href={project.gitlab} target="_blank" rel="noreferrer" className="card-link">
+                                    <FontAwesomeIcon icon={faGitlab} /> Code
                                 </a>
                             )}
                             {project.devpost && (
