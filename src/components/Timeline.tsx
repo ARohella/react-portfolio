@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faFlask, faGraduationCap, faMicrochip, faChalkboardUser } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faFlask, faGraduationCap, faMicrochip, faChalkboardUser, faUsers, faCode } from '@fortawesome/free-solid-svg-icons';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import DotGrid from './DotGrid';
 import '../assets/styles/Timeline.scss';
@@ -18,14 +18,24 @@ type Role = {
 
 const roles: Role[] = [
     {
-        title: "SWE Intern — Wire Transfer Team",
+        title: "Software Engineer — Cashiering Technology",
         company: "Charles Schwab",
-        location: "Southlake, TX",
-        date: "Jun 2025 – Aug 2025",
-        description: "Built internal systems supporting wire transfers and payment operations.",
-        tags: ["C#", ".NET 8", "REST APIs", "CI/CD", "Agile"],
+        location: "Austin, TX",
+        date: "Jun 2026 – Present",
+        description: "Building APIs for money movement on the Move Money team.",
+        tags: ["Java", "API Development"],
         icon: faBriefcase,
-        logo: "https://www.google.com/s2/favicons?sz=128&domain=schwab.com",
+        logo: "/logos/schwab.png",
+    },
+    {
+        title: "Team Lead",
+        company: "Texas Luminescence",
+        location: "Austin, TX",
+        date: "May 2025 – May 2026",
+        description: "Led an 11-person team building Allocare, an AI-powered budgeting app with predictive financial coaching.",
+        tags: ["Leadership", "AI", "Fintech"],
+        icon: faUsers,
+        logo: "/logos/texas-luminescence.jpg",
     },
     {
         title: "Fintech Foundations Program Fellow",
@@ -35,17 +45,7 @@ const roles: Role[] = [
         description: "Fintech innovation case studies; won 3rd place at capstone.",
         tags: ["Fintech", "Case Studies", "Capstone"],
         icon: faGraduationCap,
-        logo: "https://www.google.com/s2/favicons?sz=128&domain=visa.com",
-    },
-    {
-        title: "Resident Assistant",
-        company: "UTCS Academy for Machine Learning",
-        location: "Austin, TX",
-        date: "Jun 2025",
-        description: "Mentored students through ML fundamentals and coordinated technical workshops.",
-        tags: ["ML Mentorship", "Workshops", "Logistics"],
-        icon: faChalkboardUser,
-        logo: "https://www.google.com/s2/favicons?sz=128&domain=utexas.edu",
+        logo: "/logos/visa.png",
     },
     {
         title: "Undergraduate Researcher",
@@ -55,7 +55,37 @@ const roles: Role[] = [
         description: "Human-robot interaction research with NLP and ASR pipelines.",
         tags: ["HRI", "NLP", "ML", "ASR"],
         icon: faFlask,
-        logo: "https://www.google.com/s2/favicons?sz=128&domain=utexas.edu",
+        logo: "/logos/utexas.png",
+    },
+    {
+        title: "SWE Intern — Wire Transfer Team",
+        company: "Charles Schwab",
+        location: "Southlake, TX",
+        date: "Jun 2025 – Aug 2025",
+        description: "Built internal systems supporting wire transfers and payment operations.",
+        tags: ["C#", ".NET 8", "REST APIs", "CI/CD", "Agile"],
+        icon: faBriefcase,
+        logo: "/logos/schwab.png",
+    },
+    {
+        title: "Resident Assistant",
+        company: "UTCS Academy for Machine Learning",
+        location: "Austin, TX",
+        date: "Jun 2025",
+        description: "Mentored students through ML fundamentals and coordinated technical workshops.",
+        tags: ["ML Mentorship", "Workshops", "Logistics"],
+        icon: faChalkboardUser,
+        logo: "/logos/utexas.png",
+    },
+    {
+        title: "Full-Stack Developer",
+        company: "Texas Luminescence",
+        location: "Austin, TX",
+        date: "Aug 2024 – May 2025",
+        description: "Built TradeTorch, a stock candlestick prediction tool using a GRU-TCN ensemble trained on 10+ years of data.",
+        tags: ["React", "Flask", "Python", "Deep Learning"],
+        icon: faCode,
+        logo: "/logos/texas-luminescence.jpg",
     },
     {
         title: "Program Assistant",
@@ -65,7 +95,7 @@ const roles: Role[] = [
         description: "Taught robotics foundations: Linux, C++, Arduino, PID control.",
         tags: ["Linux", "C++", "Arduino", "PID"],
         icon: faMicrochip,
-        logo: "https://www.google.com/s2/favicons?sz=128&domain=utexas.edu",
+        logo: "/logos/utexas.png",
     },
 ];
 
@@ -89,22 +119,26 @@ function Timeline() {
                 <div className="timeline">
                     <div className="timeline-rail" />
                     {roles.map((role, i) => (
-                        <div key={i} className={`timeline-item ${i % 2 === 0 ? 'left' : 'right'}`}>
+                        <div key={i} className="timeline-item">
                             <div className="timeline-node">
                                 <FontAwesomeIcon icon={role.icon} />
                             </div>
                             <div className="timeline-card">
-                                {role.logo && (
-                                    <img
-                                        src={role.logo}
-                                        alt={`${role.company} logo`}
-                                        className="timeline-logo"
-                                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                                    />
-                                )}
-                                <span className="timeline-date">{role.date}</span>
-                                <h3 className="timeline-title">{role.title}</h3>
-                                <h4 className="timeline-company">{role.company} · <span>{role.location}</span></h4>
+                                <div className="timeline-header">
+                                    {role.logo && (
+                                        <img
+                                            src={role.logo}
+                                            alt={`${role.company} logo`}
+                                            className="timeline-logo"
+                                            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                        />
+                                    )}
+                                    <div className="timeline-heading">
+                                        <h3 className="timeline-title">{role.title}</h3>
+                                        <h4 className="timeline-company">{role.company} · <span>{role.location}</span></h4>
+                                    </div>
+                                    <span className="timeline-date">{role.date}</span>
+                                </div>
                                 <p className="timeline-desc">{role.description}</p>
                                 <div className="timeline-tags">
                                     {role.tags.map((t) => <span key={t} className="tl-tag">{t}</span>)}

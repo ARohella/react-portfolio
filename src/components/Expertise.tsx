@@ -15,6 +15,7 @@ import {
     faGitAlt,
     faLinux,
     faGolang,
+    faGoogle,
 } from '@fortawesome/free-brands-svg-icons';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import '../assets/styles/Expertise.scss';
@@ -33,16 +34,17 @@ const ICON_MAP: Record<string, IconDefinition> = {
     "Next.js": faReact,
     "Node.js": faNodeJs,
     "AWS": faAws,
+    "GCP": faGoogle,
     "Docker": faDocker,
     "Git": faGitAlt,
     "Linux": faLinux,
 };
 
 const languages = [
-    "Swift",
-    "TypeScript",
     "Java",
+    "TypeScript",
     "Python",
+    "Swift",
     "JavaScript",
     "C#",
     "C++",
@@ -64,11 +66,12 @@ const frameworks = [
     ".NET 8",
     "PyTorch",
     "Hugging Face",
-    "AWS",
     "Expo",
 ];
 
 const tools = [
+    "AWS",
+    "GCP",
     "Git",
     "Docker",
     "Linux",
@@ -104,7 +107,7 @@ function Expertise() {
                             <FontAwesomeIcon icon={faCode} />
                             <h3>Languages</h3>
                         </div>
-                        <p>From low-level C to modern TypeScript and Swift.</p>
+                        <p>From backend Java and C# to TypeScript, Python, and Swift.</p>
                         <div className="pill-list">
                             {languages.map((label) => <Pill key={label} label={label} />)}
                         </div>
@@ -115,7 +118,7 @@ function Expertise() {
                             <FontAwesomeIcon icon={faCubes} />
                             <h3>Frameworks</h3>
                         </div>
-                        <p>Building full-stack apps, ML pipelines, and cloud-native services.</p>
+                        <p>Building full-stack apps, mobile apps, and ML pipelines.</p>
                         <div className="pill-list">
                             {frameworks.map((label) => <Pill key={label} label={label} />)}
                         </div>
@@ -126,7 +129,7 @@ function Expertise() {
                             <FontAwesomeIcon icon={faToolbox} />
                             <h3>Tools & Platforms</h3>
                         </div>
-                        <p>DevOps, data engineering, and developer tooling to ship reliably.</p>
+                        <p>AWS and Google Cloud certified, plus DevOps and data tooling to ship reliably.</p>
                         <div className="pill-list">
                             {tools.map((label) => <Pill key={label} label={label} />)}
                         </div>

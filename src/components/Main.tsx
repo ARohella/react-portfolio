@@ -82,7 +82,10 @@ function Main() {
             <span className="caret" aria-hidden="true">|</span>
           </p>
 
-          <p className="sub-tagline">CS + Statistics & Data Science @ UT Austin '26</p>
+          <div className="sub-tagline">
+            <p className="sub-tagline-role">Software Engineer @ Charles Schwab</p>
+            <p className="sub-tagline-edu">B.S. Computer Science · Minor in Statistics & Data Science · UT Austin '26</p>
+          </div>
 
           <div className="hero-cta">
             <button className="cta-primary" onClick={scrollToProjects}>
