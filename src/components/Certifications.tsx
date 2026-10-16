@@ -12,7 +12,7 @@ const certifications = [
         expires: "Sep 2029",
         credentialId: "d57a5069df184e50a09870b3ffdabc6b",
         skills: ["Google Cloud Platform (GCP)", "Cloud Computing"],
-        url: "https://www.credly.com/badges/d57a5069-df18-4e50-a098-70b3ffdabc6b",
+        url: "https://www.credly.com/badges/4ad12db5-79ba-4f5d-81e3-3b307fd184f8/public_url",
         logo: "/logos/gcp.png",
     },
     {
